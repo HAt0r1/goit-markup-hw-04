@@ -115,10 +115,12 @@ ul {
 /* First Section style */
 .hero-section {
   background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/people_office.jpg);
   padding: 188px 0;
-}
-
-.hero-container {
 }
 
 .hero-title {
@@ -181,6 +183,20 @@ ul {
 
 .info-card {
   width: calc((100% - 72px) / 4);
+}
+
+.picture-container {
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
+.picture-container .icon {
+  display: block;
+  max-width: 64px;
+  max-height: 64px;
 }
 
 .info-card .info-title {
