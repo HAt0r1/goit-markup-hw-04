@@ -265,9 +265,34 @@ ul {
   text-align: center;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.user-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  background-color: #4d5ae5;
+  border: none solid #4d5ae5;
+  border-radius: 100%;
+}
+
+.social .icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
 }
 
 /* Fourth Section style */
+
 .portfolio-section {
   background-color: #ffffff;
   padding: 120px 0;
