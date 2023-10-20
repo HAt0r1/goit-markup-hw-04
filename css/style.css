@@ -89,12 +89,14 @@ ul {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 48px;
+  width: 50%;
   height: 4px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover::after,
 .nav-link:focus::after {
+  width: 100%;
   color: #404bbf;
   background-color: #404bbf;
 }
