@@ -74,18 +74,29 @@ ul {
 }
 
 .nav-link {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-decoration: none;
-  padding: 24px 0;
+  padding: 20px 0;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 4px;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
   color: #404bbf;
+  background-color: #404bbf;
 }
 
 .nav-contacts {
@@ -114,6 +125,7 @@ ul {
 
 /* First Section style */
 .hero-section {
+  max-width: 100%;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -282,6 +294,7 @@ ul {
   background-color: #4d5ae5;
   border: none solid #4d5ae5;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .social .icon {
