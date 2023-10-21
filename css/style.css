@@ -91,7 +91,9 @@ ul {
   left: 0;
   width: 50%;
   height: 4px;
-  transition: all 0.3s ease;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out; 
 }
 
 .nav-link:hover::after,
