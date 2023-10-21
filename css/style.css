@@ -93,7 +93,7 @@ ul {
   height: 4px;
   transition-property: width;
   transition-duration: 0.3s;
-  transition-timing-function: ease-in-out; 
+  transition-timing-function: ease-in-out;
 }
 
 .nav-link:hover::after,
@@ -387,4 +387,33 @@ footer {
   line-height: 1.5;
   letter-spacing: 0.02em;
   width: 264px;
+}
+
+.footer-social-text {
+  display: inline-block;
+  color: rgba(244, 244, 253, 1);
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  margin-left: 269px;
+  margin-bottom: 16px;
+}
+
+.footer-text-socials {
+  display: flex;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  margin-left: 120px;
+}
+
+.socials .social .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.socials .social {
+  padding: 8px;
 }
