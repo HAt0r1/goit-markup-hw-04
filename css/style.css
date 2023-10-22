@@ -91,7 +91,7 @@ ul {
   position: relative;
 }
 
-.nav-links li:first-child .nav-link::after {
+.nav-link:first-child::after {
   content: " ";
   position: absolute;
   left: 0;
@@ -267,6 +267,8 @@ ul {
   background-color: #ffffff;
   align-items: center;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-photo {
@@ -293,27 +295,35 @@ ul {
 .user-socials {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 24px;
 }
 
 .social {
-  width: 40px;
   height: 40px;
-  padding: 12px;
-  background-color: #4d5ae5;
-  border: none solid #4d5ae5;
-  border-radius: 100%;
-  cursor: pointer;
+  width: 40px;
 }
 
-.social .icon {
-  display: inline-block;
+.social-link {
+  display: flex;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
   width: 16px;
   height: 16px;
-  fill: #ffffff;
+  fill: #f4f4fd;
 }
 
+.social-link:hover,
+.social-link:focus {
+  background-color: #404bbf;
+}
 /* Fourth Section style */
 
 .portfolio-section {
@@ -340,32 +350,39 @@ ul {
   position: relative;
   width: calc((100% - 48px) / 3);
   cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-photo {
   width: 100%;
-  overflow: hidden;
 }
 
 .overlay {
-  position: absolute;
-  background-color: #4d5ae5;
-  height: 50%;
-  width: 50%;
-  transform: translateY(100%);
-  transition: transform 0.4s ease;
-}
-
-.portfolio-photo:hover .overlay {
-  transform: translateY(0);
+  position: relative;
+  overflow: hidden;
 }
 
 .overlay-text {
-  display: inline-block;
+  position: absolute;
+  top: 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #f4f4fd;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
-  width: 296px;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .overlay-text {
+  transform: translateY(0%);
 }
 
 .portfolio-data {
@@ -395,6 +412,46 @@ footer {
   padding: 100px 0;
 }
 
+.footer-main-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-first-container {
+  margin-right: 120px;
+}
+
+.footer-text-socials {
+}
+
+.socials {
+  display: flex;
+  gap: 24px;
+}
+
+.socials-link {
+  display: flex;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials-link:hover {
+  background-color: #31d0aa;
+}
+
+.footer-social-text {
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
 .footer-title {
   display: inline-block;
   font-family: "Raleway", sans-serif;
@@ -417,33 +474,4 @@ footer {
   line-height: 1.5;
   letter-spacing: 0.02em;
   width: 264px;
-}
-
-.footer-social-text {
-  display: inline-block;
-  color: rgba(244, 244, 253, 1);
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.32px;
-  margin-left: 269px;
-  margin-bottom: 16px;
-}
-
-.footer-text-socials {
-  display: flex;
-}
-
-.socials {
-  display: flex;
-  gap: 16px;
-  margin-left: 120px;
-}
-
-.socials .social .icon {
-  width: 24px;
-  height: 24px;
-}
-
-.socials .social {
-  padding: 8px;
 }
