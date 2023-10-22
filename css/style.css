@@ -92,7 +92,7 @@ ul {
 }
 
 .nav-link:first-child::after {
-  content: " ";
+  content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -439,7 +439,7 @@ footer {
 }
 
 .socials-link:hover,
-.social-link:focus {
+.socials-link:focus {
   background-color: #31d0aa;
 }
 
