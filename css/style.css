@@ -86,12 +86,12 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-links li:first-child .nav-link {
+.current {
   color: #404bbf;
   position: relative;
 }
 
-.nav-link:first-child::after {
+.current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -145,6 +145,7 @@ ul {
   background-position: center;
   background-size: cover;
   padding: 188px 0;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -419,7 +420,6 @@ footer {
 
 .footer-first-container {
   margin-right: 120px;
-  padding-left: 156px;
 }
 
 .socials {
